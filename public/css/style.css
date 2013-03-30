@@ -1,0 +1,19 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+  body div[graphic-grab] input#url {
+    background-color: #e6e6fa;
+    color: #0077b3; }
+  body div[graphic-grab] #output {
+    border: 1px solid #0081c2;
+    background-color: #add8e6;
+    width: 500px;
+    height: 500px; }
+
+.brand {
+  background: url("/img/gg-logo.png") no-repeat 0 0 transparent;
+  width: 240px;
+  height: 30px; }
+
+a {
+  color: #00B7FF; }
