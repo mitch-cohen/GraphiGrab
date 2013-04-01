@@ -25,6 +25,7 @@ exports.fetch= function(req, res){
     scriptPath = path.join(rootDir,'/server/ggServer.js'),
     pjs=spawn("/usr/local/bin/phantomjs",[scriptPath,url,resolution.width,resolution.height,imgType]);
     console.log(scriptPath);
+    var output;
     pjs.stdout.on('data', function (data) {
         console.log(data);
 
@@ -37,11 +38,14 @@ exports.fetch= function(req, res){
         console.log('error')
         console.log(data.toString());
 
-        res.send(data);
+        output =data;
 
 
     });
     pjs.on('close', function (code) {
+        if(code===0){
+            res.send(output);
+        }
         console.log('child process exited with code ' + code);
     });
 

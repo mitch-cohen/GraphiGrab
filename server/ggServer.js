@@ -1,5 +1,6 @@
 var page = require('webpage').create(),
     system = require('system'),
+
     address,
     width,
     height,
@@ -7,7 +8,7 @@ var page = require('webpage').create(),
 
 
 
-
+process.stdin.resume();
 if (system.args.length >= 4) {
     address= system.args[1];
     width= system.args[2];
@@ -21,7 +22,7 @@ if (system.args.length >= 4) {
     page.open(address, function (status) {
         if(status =='success'){
             var base64 = page.renderBase64(imgType);
-            console.log(JSON.stringify({img:{src: "data:image/"+imgType.toLowerCase()+";base64,"+base64,width: resolution.width, height: resolution.height}, address: address, imgType: imgType}));
+            process.stdout.write({img:{src: "data:image/"+imgType.toLowerCase()+";base64,"+base64,width: resolution.width, height: resolution.height}, address: address, imgType: imgType});
             phantom.exit();
         }
         else{
