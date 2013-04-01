@@ -53,7 +53,9 @@ app.directive("graphicGrab",function(){
                         console.log(scope);
                     },
                     success:function(res){
-                        var img =$('<img />',res.img);
+                        console.log(res);
+                        var img =$('<img />').width(res.img.width).height(res.img.height).attr('src',res);
+                        console.log(img);
                         $('#output').empty().append(img);
                     }});
                 return false;
