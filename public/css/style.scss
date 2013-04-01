@@ -2,7 +2,7 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   div[graphic-grab]{
-    input#url{background-color: #e6e6fa;color: #0077b3;}
+    input#url{background-color: #e6e6fa;color: #0077b3;width: 500px;}
     #output{ border:1px solid #0081c2; background-color: #add8e6; width: 500px; height: 500px;}
   }
 }

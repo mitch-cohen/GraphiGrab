@@ -63,6 +63,12 @@
                 </select>
             </div>
             <div class="input-prepend">
+                <span class="add-on">Image Type</span>
+                <select class="span2" ng-model="settings.imgType" ng-options="i for i in imgTypes" name="" id="">
+                    <option value="" class="">- select -</option>
+                </select>
+            </div>
+            <div class="input-prepend">
                 <span class="add-on">URL</span>
                 <input class='span2' type="text" id="url" name="url" placeholder="http://" >  <input type="submit" class="btn btn-primary" id="">
             </div>

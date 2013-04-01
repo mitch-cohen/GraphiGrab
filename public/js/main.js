@@ -16,6 +16,7 @@ app.directive("graphicGrab",function(){
         transclude: false,
         controller:
             function ($scope, $http){
+                $scope.imgTypes=['PNG','JPEG'];
                 $scope.resolutions=[
                     {title:'768x1024',width:768,height:1024},
                     {title:'800x600',width:800,height:600},
@@ -42,16 +43,22 @@ app.directive("graphicGrab",function(){
             },
         link: function (scope, iElement, tAttrs, controller) {
             var form = iElement.find('form');
-                     console.log(form);
-            form.ajaxForm({
-                replaceTarget: false,
-                beforeSend: function(){
-                    console.log(scope);
-                    return false;
-                },
-                success:function(res){
-                    $('#output').html(res);
-                }});
+            console.log(form);
+            form.on('submit',function(e){
+                e.preventDefault();
+                form.ajaxSubmit({
+                    replaceTarget: false,
+                    data:scope.settings,
+                    beforeSend: function(){
+                        console.log(scope);
+                    },
+                    success:function(res){
+                        var img =$('<img />',res.img);
+                        $('#output').empty().append(img);
+                    }});
+                return false;
+            }) ;
+
         }
     };
 });
