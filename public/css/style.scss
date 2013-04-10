@@ -1,3 +1,20 @@
+@mixin grad($start,$end){
+  background: -moz-linear-gradient($start, $end); /* FF 3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $start), color-stop(100%, $end)); /* Safari 4+, Chrome 2+ */
+  background: -webkit-linear-gradient($end, $start); /* Safari 5.1+, Chrome 10+ */
+  background: -o-linear-gradient($end, $start); /* Opera 11.10 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$start}', endColorstr='#{$end}'); /* IE6 & IE7 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$start}', endColorstr='#{$end}')"; /* IE8+ */
+  background: linear-gradient($end, $start); /* the standard */
+}
+@mixin rounded-corner($radius){
+
+  -moz-border-radius: $radius; /* Firefox */
+  -webkit-border-radius: $radius; /* Safari, Chrome */
+  border-radius: $radius; /* CSS3 */
+
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -5,8 +22,26 @@ body {
     input#url{background-color: #e6e6fa;color: #0077b3;width: 500px;}
     #output{ border:1px solid #0081c2; background-color: #add8e6; width: 500px; height: 500px;}
   }
+
+  .icon{ position: absolute; top:0px; left: 0px }
+
+  .choices{
+    @include rounded-corner(30px);
+    height: 200px;
+    padding: 15px;
+    @include grad(#C3E6C0,#FFF);
+    border: 2px solid #333;
+    div#choose-web{
+      #computer{
+        @extend .icon;
+        background:url('/img/computer.png') no-repeat transparent;
+      }
+      #url{
+      }
+    }
+  }
 }
-      .brand{background: url('/img/gg-logo.png') no-repeat 0 0 transparent; width: 240px; height: 30px;}
+.brand{background: url('/img/gg-logo.png') no-repeat 0 0 transparent; width: 240px; height: 30px;}
 a {
   color: #00B7FF;
 }

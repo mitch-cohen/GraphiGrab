@@ -10,6 +10,36 @@ body {
     background-color: #add8e6;
     width: 500px;
     height: 500px; }
+  body .icon, body .choices div#choose-web #computer {
+    position: absolute;
+    top: 0px;
+    left: 0px; }
+  body .choices {
+    -moz-border-radius: 30px;
+    /* Firefox */
+    -webkit-border-radius: 30px;
+    /* Safari, Chrome */
+    border-radius: 30px;
+    /* CSS3 */
+    height: 200px;
+    padding: 15px;
+    background: -moz-linear-gradient(#c3e6c0, white);
+    /* FF 3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c3e6c0), color-stop(100%, white));
+    /* Safari 4+, Chrome 2+ */
+    background: -webkit-linear-gradient(white, #c3e6c0);
+    /* Safari 5.1+, Chrome 10+ */
+    background: -o-linear-gradient(white, #c3e6c0);
+    /* Opera 11.10 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c3e6c0', endColorstr='white');
+    /* IE6 & IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#c3e6c0', endColorstr='white')";
+    /* IE8+ */
+    background: linear-gradient(white, #c3e6c0);
+    /* the standard */
+    border: 2px solid #333; }
+    body .choices div#choose-web #computer {
+      background: url("/img/computer.png") no-repeat transparent; }
 
 .brand {
   background: url("/img/gg-logo.png") no-repeat 0 0 transparent;

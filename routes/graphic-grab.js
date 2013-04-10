@@ -1,56 +1,55 @@
-
-
-
+//get dependencies
 var util = require('util'),
-    exec = require('child_process').exec,
     path = require('path'),
-    util=require('util'),
-    child,
-    path = require('path');
-            /*
-child = exec(),
-    function (error, stdout, stderr) {
-        console.log('stdout: ' + stdout);
-        console.log('stderr: ' + stderr);
-        if (error !== null) {
-            console.log('exec error: ' + error);
-        }
-    });       */
+    Q= require('q'),
+    qs = require('querystring'),
+    request = require('request');
+
+/* TODO - CREATE A MODULE FOR THE FOLLOWING IN THE FUTURE */
+var imgurAPI = {client_id:'37bd7d028bfa3eb',secret:'6b6491e9096071961e828f1414e1d9d8b87e79dc'};
+
+
+
+
+
+/* END OF FUTURE MODULE CODE */
+///create options
+
+var _options={};
+_options.base64=function(opt,stream){
+    return opt.output =  stream.toString('base64');
+};
+_options.base64link=function(){};
+_options.imgTag=function(){
+
+};
+_options.canvas=function(){};
+_options.svg=function(){};
+_options.imgurUpload=function(base64string){
+    var defer = Q.
+    request.post('https://api.imgur.com/3/image'),{form:{image:base64string,client_id: imgurAPI.client_id}},function(){
+
+
+    });
+
+
+};
+
+Object.prototype.all_keys = function(obj){
+    var keys = [];
+    for(var key in obj){
+        keys.push(key);
+    }
+    return keys;
+}
 
 
 exports.fetch= function(req, res){
-    var url =req.param('url'),rootDir=require('path').dirname(module.parent.filename),resolution =req.param('resolution'),  imgType =req.param('imgType'),cmd=''  ;
+    var url =req.param('filename'),rootDir=require('url');
     //cmd= 'node '+ path.join(__dirname,'node_modules/phantomjs/bin/phantomjs')+' '+ path.join(__dirname,'server/ggServer.js')+ ["'"+url+"'",resolution.width,resolution.height,"'"+imgType+"'"].join(" ");
-    var spawn = require('child_process').spawn,
-    scriptPath = path.join(rootDir,'/server/ggServer.js'),
-    pjs=spawn("/usr/local/bin/phantomjs",[scriptPath,url,resolution.width,resolution.height,imgType]);
-    console.log(scriptPath);
-    var output;
-    pjs.stdout.on('data', function (data) {
-        console.log(data);
 
-        console.log('data being send')
-        res.send(data);
-
-    });
-
-    pjs.stderr.on('data', function (data) {
-        console.log('error')
-        console.log(data.toString());
-
-        output =data;
-
-
-    });
-    pjs.on('close', function (code) {
-        if(code===0){
-            res.send(output);
-        }
-        console.log('child process exited with code ' + code);
-    });
-
-    req.connection.on('end', function() {
-        pjs.kill();
-    })
 };
 
+exports.options =function(req,res){
+    res.render(_options.all_keys());
+};

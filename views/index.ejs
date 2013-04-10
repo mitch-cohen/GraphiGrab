@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Graphic Grab</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Graphic Grab is used to get screenshots of any accessible web page.">
+    <meta name="description" content="Graphic Grab is turn an image into multiple representations.">
     <meta name="author" content="">
 
     <!-- Le styles -->
@@ -54,23 +54,19 @@
     <h1>Web screenshots made simple.</h1>
     <p>Type in the URL of what you want a screenshot of.<br> The results will be posted in the blue box.</p>
     <div>
-        <form id="gg" action="/fetch-image" method="post">
-
-            <div class="input-prepend">
-                <span class="add-on">Resolution</span>
-                <select class="span2" ng-model="settings.resolution" ng-options="r as r.title for r in resolutions" name="" id="">
-                <option value="" class="">- select -</option>
-                </select>
+        <form id="gg" action="/fetch-image" method="post" enctype="multipart/form-data" >
+            <div class="row">
+                <div id="web" class="span3">
+                    <input type="file" ng-model="filename" >
+                </div>
+                <div id="url" class="span3">
+                    <input type="text" placeholder="http://" value="http://">
+                </div>
             </div>
-            <div class="input-prepend">
-                <span class="add-on">Image Type</span>
-                <select class="span2" ng-model="settings.imgType" ng-options="i for i in imgTypes" name="" id="">
-                    <option value="" class="">- select -</option>
-                </select>
-            </div>
-            <div class="input-prepend">
-                <span class="add-on">URL</span>
-                <input class='span2' type="text" id="url" name="url" placeholder="http://" >  <input type="submit" class="btn btn-primary" id="">
+            <div class='row-fluid'>
+                <ul id="options" class="span6">
+                    <li ng-repeat="o in options" id=""><label for="{{o.title}}">{{o.title}}<input type="checkbox" ng-checked="o.checked"></label></li>
+                </ul>
             </div>
         </form>
     </div>
