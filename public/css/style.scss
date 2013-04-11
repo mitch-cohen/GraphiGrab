@@ -25,6 +25,7 @@ body {
 
   .icon{ position: absolute; top:0px; left: 0px }
 
+  #options{list-style: none; }
   .choices{
     @include rounded-corner(30px);
     height: 200px;

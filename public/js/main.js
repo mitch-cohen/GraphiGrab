@@ -17,7 +17,8 @@ app.directive("graphicGrab",function(){
         controller:
             function ($scope, $http){
                 $scope.postData={};
-                $http.get('/graphic-grab/options').success(
+                $scope.options=[];
+                $http.get('/options').success(
                     function(options){
                         options.forEach(function(o){
                             $scope.options[$scope.options.length]= {title:o,checked:false};

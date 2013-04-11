@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b42398ac-3aa9-4036-b9fd-e4652d36a603" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/.sass-cache/30006a958e773ad6e532b064c7412ec1503cf970/style.scssc" afterPath="$PROJECT_DIR$/public/css/.sass-cache/30006a958e773ad6e532b064c7412ec1503cf970/style.scssc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.scss" afterPath="$PROJECT_DIR$/public/css/style.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/main.js" afterPath="$PROJECT_DIR$/public/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/graphic-grab.js" afterPath="$PROJECT_DIR$/routes/graphic-grab.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.ejs" afterPath="$PROJECT_DIR$/views/index.ejs" />
     </list>
     <ignored path="GraphiGrab.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,7 +31,7 @@
       <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="25" selection-start="667" selection-end="667" vertical-scroll-proportion="0.0">
+            <state line="21" column="49" selection-start="460" selection-end="460" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -42,7 +49,7 @@
       <file leaf-file-name="index.ejs" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/index.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="28" selection-start="2587" selection-end="2587" vertical-scroll-proportion="-14.958333">
+            <state line="66" column="45" selection-start="2799" selection-end="2799" vertical-scroll-proportion="-10.583333">
               <folding />
             </state>
           </provider>
@@ -51,7 +58,7 @@
       <file leaf-file-name="style.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/style.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="7" selection-start="1473" selection-end="1473" vertical-scroll-proportion="0.0">
+            <state line="28" column="41" selection-start="1227" selection-end="1227" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -67,9 +74,9 @@
       <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="12" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.0">
+            <state line="52" column="0" selection-start="1661" selection-end="1661" vertical-scroll-proportion="0.0">
               <folding>
-                <marker date="1365557192000" expanded="true" signature="502:1284" placeholder="{...}" />
+                <marker date="1365675379000" expanded="true" signature="544:1203" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -78,7 +85,7 @@
       <file leaf-file-name="graphic-grab.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/graphic-grab.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="17" selection-start="113" selection-end="113" vertical-scroll-proportion="-0.42334095">
+            <state line="34" column="0" selection-start="771" selection-end="771" vertical-scroll-proportion="0.812357">
               <folding />
             </state>
           </provider>
@@ -107,14 +114,14 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/views/index.html.ejs" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/server/ggServer.js" />
         <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/public/js/main.js" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
-        <option value="$PROJECT_DIR$/public/css/style.scss" />
-        <option value="$PROJECT_DIR$/views/index.ejs" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/public/js/main.js" />
+        <option value="$PROJECT_DIR$/views/index.ejs" />
+        <option value="$PROJECT_DIR$/public/css/style.scss" />
         <option value="$PROJECT_DIR$/routes/graphic-grab.js" />
       </list>
     </option>
@@ -543,7 +550,15 @@
       <created>1365589056609</created>
       <updated>1365589056609</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="pivot time!">
+      <created>1365589071168</created>
+      <updated>1365589071168</updated>
+    </task>
+    <task id="LOCAL-00008" summary="pivot time!">
+      <created>1365589085705</created>
+      <updated>1365589085705</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -675,45 +690,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="40" selection-start="617" selection-end="617" vertical-scroll-proportion="0.47291362">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="12" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.0">
+        <state line="52" column="0" selection-start="1661" selection-end="1661" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1365557192000" expanded="true" signature="502:1284" placeholder="{...}" />
+            <marker date="1365675379000" expanded="true" signature="544:1203" placeholder="{...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/img/computer.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="25" selection-start="667" selection-end="667" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="7" selection-start="1473" selection-end="1473" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="28" selection-start="2587" selection-end="2587" vertical-scroll-proportion="-14.958333">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -724,9 +706,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/computer.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="41" selection-start="997" selection-end="997" vertical-scroll-proportion="0.5607477">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="49" selection-start="460" selection-end="460" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="45" selection-start="2799" selection-end="2799" vertical-scroll-proportion="-10.583333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="41" selection-start="1227" selection-end="1227" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/graphic-grab.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="17" selection-start="113" selection-end="113" vertical-scroll-proportion="-0.42334095">
+        <state line="34" column="0" selection-start="771" selection-end="771" vertical-scroll-proportion="0.812357">
           <folding />
         </state>
       </provider>

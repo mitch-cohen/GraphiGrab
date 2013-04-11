@@ -26,22 +26,12 @@ _options.imgTag=function(){
 _options.canvas=function(){};
 _options.svg=function(){};
 _options.imgurUpload=function(base64string){
-    var defer = Q.
-    request.post('https://api.imgur.com/3/image'),{form:{image:base64string,client_id: imgurAPI.client_id}},function(){
 
-
-    });
+    request.post('https://api.imgur.com/3/image',{form:{image:base64string,client_id: imgurAPI.client_id}});
 
 
 };
 
-Object.prototype.all_keys = function(obj){
-    var keys = [];
-    for(var key in obj){
-        keys.push(key);
-    }
-    return keys;
-}
 
 
 exports.fetch= function(req, res){
@@ -51,5 +41,9 @@ exports.fetch= function(req, res){
 };
 
 exports.options =function(req,res){
-    res.render(_options.all_keys());
+    var keys = [];
+    for(var key in _options){
+        keys.push(key);
+    }
+    res.send(keys);
 };
